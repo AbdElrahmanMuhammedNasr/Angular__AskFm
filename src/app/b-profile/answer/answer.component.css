@@ -1,0 +1,37 @@
+.post {
+  background-color: #FFF;
+  margin-top: 20px;
+
+
+}
+.post .question a {color: #4080D8; display: inline-block;}
+.post .answer img {
+  float: left;
+  width: 8%;
+  border-radius: 50%;
+  margin:  2%
+}
+.post .answer p {width: 80%; display: inline-block; margin-bottom: 20px;margin-top: 25px }
+.post .answer  span{display: block; margin: 20px; color: #C0C0C0;}
+.post footer{
+  height: 20px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-top:  2px solid #EDEEF2
+}
+.post footer i {
+  margin: 1% 7%;
+  color: #c0c0c0;
+}
+.post footer i:hover{
+  cursor: pointer;
+}
+.post footer i:active {color: #FF643C}
+.post footer .one {
+  float: left;
+  width: 80%;
+}
+.post footer .two {
+  float: right;
+  width: 20%;
+}

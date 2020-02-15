@@ -1,0 +1,53 @@
+<!-- --------------------------------------------- start Post ----------------------------------- -->
+<div style="width: 95%">
+
+  <div class="row" style="margin-top: 55px">
+
+    <div class="col-xl-8" style="margin-left:50px ">
+
+<!--    this will for loop it   -->
+      <div class="container" *ngFor="let post of Posts">
+        <div class="post col-md-8 col-xs-12">
+
+          <section style="margin-top: 20px">
+            <div class="question">
+              <h3 class="h3">{{post.question}}</h3>
+              <a routerLink="/profile" [queryParams]="{user:post.email}">{{post.email}}</a>
+            </div>
+
+            <div class="answer">
+              <p>{{post.answer}}</p> <br><BR><BR>
+              <span>{{post.date | date}}</span>
+              <div  style=" width: 50px ; height: 50px ;background: url('./other.svg')" >
+              </div>
+            </div>
+          </section>
+
+          <span>{{post.user.fullName}}</span>
+
+          <hr>
+        </div>
+      </div>
+
+<!-- -->
+
+
+    </div>
+<!--   left side -->
+
+
+    <!-- --------------------------------------------- Start ask ----------------------------------- -->
+
+    <div class="col-xl-3">
+      <app-friend-stuff></app-friend-stuff>
+    </div>
+
+
+  </div>
+
+
+</div>
+
+
+
+

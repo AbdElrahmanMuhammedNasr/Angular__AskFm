@@ -1,0 +1,76 @@
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* --------------------------------------Start Main Rulez--------------------------------------------*/
+.container{   width: 1170px;  margin: auto;}
+.clear{clear: both}
+.h3{font-size: 25px; font-weight: bold; display: inline-block; margin: 20px }
+/*----------------------------------------------End Main Rulez-----------------------------------------*/
+/*---------------------------------------------Start post--------------------------------------------*/
+.post {background-color: #FFF}
+.post section {border-top: 10px solid #EDEEF2;  }
+.post   .num {background-color: #CACACA ; border-radius: 50%; color: #FFF; padding: 0 5px}
+.post .question a:hover{
+  cursor: pointer;
+}
+.post .question a:nth-of-type(2){
+  background-color: #DADADF;
+  color: #4A4A4A;
+  padding: 10px 40px;
+  border-radius: 5px;
+  margin-left: 20px
+}
+.post .question a:nth-of-type(3){
+  background-color: #4080D8;
+  color: #FFF;
+  padding: 10px 40px;
+  border-radius: 5px;
+  margin-left: 20px
+}
+.post .question p {font-size: 20px}
+
+.post button{
+  float: right;
+  margin-top: 20px;
+  margin-right: 60px;
+}
+
+
+.question_answer p  {margin-left: 20px; color: #CACACA; display: inline-block;}
+.question_answer .answer_btn{
+  float: right;
+  background: none;
+  border: 2px solid #DADADF;
+  border-radius: 20px ;
+  color: #FF643C;
+  margin-top: 20px;
+  padding: 5px 20px;
+  transition: all 0.5s ease-in-out
+}
+.question_answer .answer_btn:hover{
+  background: #FF643C;
+  color: #FFF;
+
+}
+.fa.fa-times.delete{
+  float: right;
+  font-size: 20px;
+  margin: 10px;
+}
+/*=========================================================================================*/
+/* Start Media Query */
+@media (max-width: 767px) { /* Mobile & Tablet Rules */
+
+}
+@media (min-width: 768px) and (max-width: 991px) { /* Small Screen Rules */
+
+}
+@media (min-width: 992px) and (max-width: 1199px) { /* Medium Screen Rules */
+
+}
+@media (min-width: 1200px) { /* Large Screen Rules */
+
+}
+/* End Media Query */

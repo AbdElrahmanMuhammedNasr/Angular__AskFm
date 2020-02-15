@@ -1,0 +1,102 @@
+.container{   width: 1170px;  margin: auto;}
+.clear{clear: both}
+.h3{font-size: 25px; font-weight: bold; display: inline-block; margin: 20px }
+/*---------------------------------------------Start ask-------------------------------------------*/
+.ask{
+  background-color: #FFFFED;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+.ask textarea {
+  width: 90%;
+  padding: 12px 20px;
+  margin-left:5%;
+  height: 150px
+}
+input[type="checkbox"] {
+  margin-bottom:  20px;
+}
+.ask .btn{
+  background-color: #FF643C;
+  border: none;
+  float: right;
+  height: 30px;
+  color: #FFF;
+  border-radius: 10px;
+  line-height: 15px;
+  margin-right: 5%;
+}
+
+.scrollbar
+{
+  float: left;
+  height: 300px;
+  width: 100%;
+  background: #fff;
+  overflow-y: scroll;
+  margin-bottom: 25px;
+}
+
+.force-overflow
+{
+  min-height: 40px;
+}
+
+.ask.friends .btn{
+  margin-top: 10px;
+  background: none;
+  color:#FF643C;
+  border: 1px solid #C0C0C0;
+  transition: all 0.5s ease-in-out;
+}
+.ask.friends .btn:hover{
+  background: #FF643C;
+  color:#FFf;
+}
+.ask.friends {background: #FFF}
+
+/*---------------------------------------------End ask-------------------------------------------*/
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.75;
+  z-index: 50;
+
+}
+
+
+
+/*---------------------------------------------Start askPeople-------------------------------------------*/
+
+.ask_people {
+  position: absolute;
+  top :25%;
+  left: 25% ;
+  background: #FFF;
+  width: 800px;
+  padding: 20px;
+  border-radius: 25px;
+  z-index: 100;
+}
+.ask_people p {margin: 10px}
+.ask_people a i { font-size: 30px ;   }
+.ask_people textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  height: 150px ;
+  border: 1px dashed #DDD;
+  border-radius: 10px
+}
+.ask_people button{
+  background-color: #FF643C;
+  border: none;
+  float: right;
+  height: 30px;
+  color: #FFF;
+  border-radius: 10px
+}

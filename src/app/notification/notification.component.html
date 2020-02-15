@@ -1,0 +1,28 @@
+<div style="width: 95% ;margin: auto" >
+  <div class="row" style="margin: auto">
+    <div class="col-xl-8" style="margin-left: 3%">
+      <div class="post">
+          <ul>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a class="nav-link" routerLink="/notification"> All</a></li>
+            <li routerLinkActive="active"><a class="nav-link" routerLink="/notification/answer"> Answer</a></li>
+            <li routerLinkActive="active"><a class="nav-link" routerLink="/notification/likes"> Likes</a></li>
+          </ul>
+        <br>
+      </div>
+
+<!--   not in post   -->
+      <div class="post" style="top: 22%;background-color: #2A3545">
+        <router-outlet></router-outlet>
+      </div>
+
+
+    </div>
+
+    <div class="col-xl-3" style="margin-top: 80px">
+      <app-friend-stuff></app-friend-stuff>
+    </div>
+
+  </div>
+
+</div>
+

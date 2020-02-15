@@ -1,0 +1,55 @@
+<div style="width: 95%">
+  <div class="row" style="margin-top: 55px">
+      <div class=" col-xl-6" style="margin-left:10%;width: 200px">
+
+        <article class="post">
+            <section class="search">
+              <input class="form-control" type="search" [(ngModel)]="inputData" placeholder="Search People by KeyWords" >
+            </section>
+        </article>
+
+
+<!--        | filter  : inputData:'name' do to forget to filter -->
+        <div class="clear"></div>
+          <section class="friendsSection" *ngFor="let friend of userFriends" >
+            <div class="row" style="margin: 0">
+
+              <img class="col-xl-3" src="./1.svg">
+              <span class="col-xl-3" style="margin-top: 10px"> friend.name not Here For now</span>
+              <a routerLink="/profile" [queryParams]="{user: friend.email}" class="col-xl-3" style="margin-top: 10px"> <span>{{friend.email}}</span> </a>
+              <button (click)="onAskOneFriend( friend.email )" style="margin-top:2px;margin-bottom:2px " class="col-xl-3  btn btn-outline-primary"> Ask</button>
+
+            </div>
+
+          </section>
+
+          <div class="clear"></div>
+
+
+      </div>
+
+
+      <div class="col-xl-3"style="margin-left:10%">
+
+        <app-friend-stuff></app-friend-stuff>
+
+        <div style="background-color: #DBDBDB;text-align: center; margin-top: 350px">
+          <a href="#"> About ASKfm </a> -
+          <a href="#">Safety center </a> -
+          <a href="#"> Help </a> -
+          <a href="#">Community Guidelines </a> -
+          <a href="#">Terms of use </a> -
+          <a href="#">Privacy  policy </a> -
+          <a href="#"> Cookies  policy </a> -
+          <a href="#"> Advertising </a>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+</div>
+

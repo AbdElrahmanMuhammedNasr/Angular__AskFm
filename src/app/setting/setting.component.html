@@ -1,0 +1,102 @@
+<!-- ------------------------------- Strrt Main Setting--------------------------------- -->
+<section>
+  <div class="container2 row">
+    <div class="Main">
+
+      <div class="info col-sm-12">
+        <form class="profile" (ngSubmit)="onGetUpdateData()" #updateDataForm="ngForm">
+
+<!--          <h4>Full Name</h4>-->
+<!--          <input class="form-control" type="text" [ngModel]="userSetting.fullName" name="FULLNAME" required >-->
+<!--          <hr>-->
+
+
+
+          <h4>Location</h4>
+          <input class="form-control" type="text" [ngModel]="userSetting.location" name="LOCATION" required >
+          <hr>
+
+          <h4>bio</h4>
+          <textarea class="form-control" [ngModel]="userSetting.bio" name="BIO" >
+          </textarea>
+          <span>A little information about yourself </span>
+          <hr>
+
+          <h4>Web</h4>
+          <div style="border: 2px solid #a2a0a0;padding: 20px">
+            <input style="margin-bottom: 10px" class="form-control" *ngFor="let website of userSetting.anotherWebSites " [ngModel]="website" [ngModelOptions]="{standalone: true}">
+
+          </div>
+          <hr>
+
+          <h4>Add hashtags</h4>
+          <input class="form-control" type="text" [ngModel]="userSetting.hashTags" name="HASHTAG" required >
+          <span>Don’t post personal info in hashtags such as your home address or phone number</span>
+          <hr>
+
+          <h4>Username</h4>
+          <input class="form-control" type="text" [ngModel]="userSetting.userName" name="USERNAME" required   disabled >
+          <span>Username can not be changed</span>
+          <hr>
+
+          <h4>Email</h4>
+          <input class="form-control" type="Email" [ngModel]="'not here for now'" name="EMAIL" required disabled>
+          <a class="info-email">Change email</a> <br>
+          <a class="info-email">Resend confirmation email</a>
+          <hr>
+
+
+          <h4>Birthday</h4>
+          <input class="form-control" type="date" name="DATE" [ngModel]="userSetting.dateOfBirth">
+
+          <span>Your age will not be visible to other users</span>
+          <hr>
+
+          <h4>Gender</h4>
+          <select [ngModel]="userSetting.gender" name="GENDER" required  >
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+
+          <div class="hr"></div>
+
+          <div class="check" *ngFor="let check of Checks ; let i = index">
+            <ul class="list-group">
+              <li class="list-group-item">
+              <a  href="">
+                <div class="row">
+                  <span class="col-xl-11">{{check.What}}</span>
+                  <input class="col-xl-1" type="checkbox" [ngModel]="userSetting.privacyQuestion[i]" name="{{check.name}}" >
+                </div>
+              </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="clear"></div>
+
+          <hr>
+
+          <button class=" btn btn-danger" type="submit">Save</button>
+          <br><BR>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<section class="setting-account">
+  <div class="container2 row">
+    <div  style="width: 100%;">
+      <a href="#">Change password</a>
+      <a href="#">Deactive Account</a>
+      <a href="#">View Bloked List</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ------------------------------- End Main Setting--------------------------------- -->

@@ -1,0 +1,65 @@
+
+<div class="cover row">
+  <div class="container default_photo-cover">
+
+    <div class="Profilee">
+      <img class="profile" src="./1.svg">
+      <h4> <span class="online"></span>{{userData.fullName}}</h4>
+      <p class="userName">@{{userData.userSetting.userName}}</p>
+      <p class="followers"><span>Followers : <strong>{{userData.userProfile.followers}}</strong> </span> </p>
+
+      <div class="btn-group" style="text-align: center">
+          <button style="margin-right: 10px; border-radius: 5px" class="btn btn-danger" (click)="onFollowUser()">{{follow === true ? 'Follow':'UnFollow'}}</button>
+          <button style="margin-right: 10px; border-radius: 5px" class="btn btn-danger" (click)="onBlockThisUser()">Block</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- -->
+
+<div class="container likes" style="border: 2px solid white; height: 70px ">
+    <ul>
+      <li data-class="question" routerLinkActive="activee">
+        <strong>720</strong> <br>
+        <span><a routerLink="/profile/answer">Answer</a></span>
+      </li>
+
+      <li data-class="profilelikes"  routerLinkActive="activee">
+        <strong>5000</strong> <br>
+        <span><a routerLink="/profile/likes">Likes</a></span>
+      </li>
+
+      <li data-class="gift"  routerLinkActive="activee">
+        <strong>1</strong> <br>
+        <span><a routerLink="/profile/gift">Gifts</a></span>
+      </li>
+
+    </ul>
+
+</div>
+
+
+<div class="Mycontainer" style="width: 68%;margin: auto;">
+  <div class="row">
+    <div  style="width: 70%" >
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="inFo " style="width: 30% ;margin-top: 15px">
+      <div class="container">
+        <h4> About </h4>
+        <input class="form-control" [value]="userData.userSetting.userName" disabled>
+        <input class="form-control" [value]="userData.userSetting.bio" disabled>
+        <input class="form-control" [value]="userData.userSetting.location" disabled>
+        <input class="form-control" [value]="userData.userSetting.hashTags" disabled>
+
+        <div><a href="https://www.facebook.com/feidi33"> </a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

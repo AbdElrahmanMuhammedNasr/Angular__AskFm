@@ -1,0 +1,13 @@
+.MyError{
+  width: 97vw;
+  height: 100vh;
+  /*background: #b4b4b4;*/
+  /*background: url("./error.svg");*/
+  /*background-repeat: no-repeat;*/
+  /*margin-left: 15%;*/
+  /*margin-top: 10px;*/
+}
+.MyError img{
+  margin: 6% 14%;
+
+}

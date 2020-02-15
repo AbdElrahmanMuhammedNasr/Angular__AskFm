@@ -1,0 +1,108 @@
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+  background-color: #2A3545
+}
+/* --------------------------------------Start Main Rulez--------------------------------------------*/
+.container{   width: 1170px;  margin: auto;}
+.clear{clear: both}
+.h3{font-size: 25px; font-weight: bold; display: inline-block; margin: 20px }
+/*----------------------------------------------End Main Rulez-----------------------------------------*/
+/*---------------------------------------------Start Main-setting--------------------------------------------*/
+.container2{
+  background: #FFF ;
+  width: 850px ;
+  margin: 56px auto;
+}
+
+
+/* info      */
+.Main{
+  width: 93%;
+}
+
+.Main .info{
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.Main .info h4{
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+
+.info input,textarea {
+  width: 100%;
+  display: block;
+  color: #333;
+  height: 33px;
+  line-height: 1.5em
+}
+.info textarea{
+  height: 80px
+}
+.info span {
+  color: #b4b4b4;
+}
+
+.info .info-email{
+  color: #ff907b;
+  text-decoration: none;
+  cursor: pointer;
+}
+.info select{
+  font-size: 16px;
+  background: #fff;
+  padding: 10px 5px;
+  border: 1px solid #edeef2;
+  width: 31%;
+  margin-right: 1%
+}
+.info .hr{
+  width: 103.6%;
+  height: 5px;
+  background-color: #edeef2;
+  margin-left: -30px;
+  margin-top: 15px
+}
+
+.info .check{
+  margin-top: 30px;
+  height: 30px
+
+}
+
+.check a {
+  text-decoration: none;
+}
+.check input{
+  height: 20px;
+  background-color: #ff6647;
+  color: #FFF;
+  margin-top: 3px;
+
+
+}
+
+.check span{
+  color: #FF6648;
+  float: left;
+}
+
+
+.btn{
+  margin-top: 20px;
+  padding: 5px 35px
+}
+
+/***************** Acount ****************/
+.setting-account a {
+  display: block;
+  text-decoration: none;
+  padding: 10px  ;
+  border-bottom: 2px solid #DDD ;
+  /*margin-bottom: 200px;*/
+
+}

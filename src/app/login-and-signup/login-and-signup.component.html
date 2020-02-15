@@ -1,0 +1,66 @@
+
+<!--   Start form  -->
+
+<form class="signup" *ngIf="isSignUP" (ngSubmit)="onSignUpForm()" #signUpFormData="ngForm">
+  <div class="color">
+    <div class="container2">
+
+<!--      <section>-->
+        <input class="form-control" type="Email" name="Email" placeholder="Email" #userNameCheck="ngModel" ngModel name="EMAIL" required email> <br>
+<!--        <span class="help-block" *ngIf="!userNameCheck.valid && userNameCheck.touched">Please Enter Valid Email</span>-->
+<!--      </section>-->
+
+<!--      <section>-->
+     <input class="form-control" type="text"  placeholder="username" ngModel name="USERNAME" required> <br>
+      <input class="form-control" type="password" placeholder="password" ngModel name="PASSWORD" required> <br>
+      <input class="form-control" type="text"  placeholder="full name" ngModel name="FULLNAME" required><br>
+<!--      </section>-->
+      <h4>Birthdate</h4>
+      <input class="form-control" type="date" >
+
+
+      <h4>Gender</h4>
+      <select class="Gender" ngModel name="GENDER"  [ngModel]="'Male'">
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+
+      <h4>Language</h4>
+      <select class="Language" ngModel name="LANGUAGE"  [ngModel]="'en'">
+        <option value="en">English</option>
+        <option value="ar">Arabic</option>
+      </select>
+
+
+      <p>By signing up you agree to our <span> <a>Terms</a></span>  and <SPAN> <a href=""> Privacy policy</a></SPAN></p>
+
+      <button type="submit" class="btn" [disabled]="!signUpFormData.valid">Sign Up</button>
+      <div class="clear"></div>
+      <p>Your name and any information posted on your profile will be visible to other users. Information you provide may be shared with third parties as explained in our <span> <a href="">Privacy policy.</a></span>  Please don’t provide any information you don’t want shared.</p>
+    </div>
+    <button (click)="isSignUP = !isSignUP" class="btn" style="background-color: #FF6648; color: #ffffff; margin: 20px">Login</button>
+
+  </div>
+</form>
+
+
+<!--   End form  -->
+
+
+
+<!--   Start form Login  -->
+
+<form class="login" *ngIf="!isSignUP"  (ngSubmit)="onLoginForm()"  #loginFormData="ngForm">
+  <div class="color">
+    <div class="container2 ccc">
+      <span class="help-block" *ngIf="!userValid">Username or Password is not correct</span>
+      <input class="form-control" type="text" placeholder="email" ngModel name="EMAIL" required email> <br>
+      <input class="form-control" type="password"  placeholder="password" ngModel name="PASSWORD" required> <br>
+      <input  type="checkbox" name="check" ngModel > Remmber Password
+      <a href="#">Forget Password ?</a>
+      <button type="submit" class="btn">Login</button>
+      <div class="clear"></div>
+    </div>
+    <button type="button"  (click)="isSignUP = !isSignUP" class="btn" style="background-color: #FF6648; color: #ffffff; margin: 20px">SignUp</button>
+  </div>
+</form>

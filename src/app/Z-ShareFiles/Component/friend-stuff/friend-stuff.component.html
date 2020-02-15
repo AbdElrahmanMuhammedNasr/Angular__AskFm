@@ -1,0 +1,32 @@
+<div class="hiddeninask" style="margin-top: 20px">
+
+  <div class="ask">
+    <h3 class="h3">Ask People</h3>
+    <form (ngSubmit)="onAskAnyMoreOneRandam()" #askAnyOne="ngForm">
+      <textarea placeholder="What, when, why… ask" ngModel name="QUEATION" required >
+
+      </textarea><br>
+      <input style="margin-left: 5%" type="checkbox" [ngModel]="false" name="ANONY" > Ask anonymously
+      <button type="submit" class="btn" [disabled]="!askAnyOne.valid" >Ask</button>
+    </form>
+  </div>
+
+  <!--     friends   -->
+
+  <div class="ask  friends">
+    <h3 class="h3">Your Best friends</h3>
+    <div class="scrollbar" id="style-13">
+      <div class="force-overflow" *ngFor="let best of bestFriend">
+          <img src="./other.svg"  style="margin-left: 30px">
+          <a routerLink="/profile" [queryParams]="{user:best.account}"> <span>{{best.account}}</span> </a>
+          <button (click)="onAskOne(best.account)" class="btn"> ask</button>
+      </div>
+      <hr>
+
+    </div>
+  </div>
+
+
+</div>
+
+

@@ -1,0 +1,46 @@
+<!-- ---------------------------------------------Start askpeople-------------------------------------- -->
+<section class="ask_people">
+  <a href="" *ngIf="!fragmentTestMore">{{userAccount}}</a>
+
+  <form (ngSubmit)="onAskoneOrMore()" #askOneOrMoreForm="ngForm">
+    <textarea placeholder="What, when, why… ask" ngModel name="QUESTION" required="" ></textarea>
+    <input type="checkbox" ngModel name="ANON" [value]=false> Ask anonymously
+     <button type="submit" [disabled]="!askOneOrMoreForm.valid" class="btn btn-outline-danger">ASK</button>
+    <div class="clear"></div>
+    <div *ngIf="fragmentTestMore">
+      <textarea style="max-height: 100px ;"disabled [value]="usersAsked">
+
+      </textarea>
+    </div>
+    <h3 *ngIf="fragmentTestMore">Select Friends ({{counter}})</h3>
+  </form>
+  <input *ngIf="fragmentTestMore" class="form-control" type="search" [(ngModel)]="inputData" placeholder="Search People by KeyWords" >
+
+
+  <div class="scrollbar" id="style-13" *ngIf="fragmentTestMore">
+    <div class="force-overflow">
+
+      <div class="friends" *ngFor="let user of userFriends | filter: inputData:'name'" (click)="onSelectUser(user.email)">
+
+        <div class="account" >
+          <a href="#"><img src="image/person1.jpg"></a>
+          <span>name not here right now</span>
+          <a routerLink="/profile" [queryParams]="{user:user.email}" >
+            <span>{{user.email}}</span>
+          </a>
+        </div>
+
+        <div class="clear"></div>
+
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+</section>
+<!-----------------------------------------------End askPeople---------------------------------------- -->
+
+

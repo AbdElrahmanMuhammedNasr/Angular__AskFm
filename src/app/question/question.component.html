@@ -1,0 +1,56 @@
+<!-- --------------------------------------------- start Post ----------------------------------- -->
+<div style="width: 95%">
+   <div class="row" style="margin-top: 55px">
+
+    <div class="post col-xl-6" style="margin-left:10%;width: 200px">
+      <article>
+
+        <section>
+          <div class="question">
+            <a class="h3">Question <span class="num">{{numberOfQuestions}}</span> </a>
+
+              <button (click)="onDeleteAllQustions()"  class="btn btn-dark"> <i class="fa fa-times" aria-hidden="true"></i> Delete All Quetion  </button>
+              <button (click)="onGetRandomQuestions()" class="btn btn-primary"> <i class="fa fa-sort-desc" aria-hidden="true"></i> Get Random Quetion  </button>
+
+          </div>
+        </section>
+
+        <div class="clear"></div>
+
+        <section>
+          <div class="question">
+            <p>Questions you’ve been asked will not be visible to other users on your profile until you choose to answer them</p>
+          </div>
+        </section>
+
+        <div class="clear"></div>
+
+        <section *ngFor="let question of UserQuestions ; let i = index">
+
+          <div class="question_answer">
+            <h3 class="h3">{{ question.question }}</h3>
+            <a routerLink="/profile" [queryParams]="{user: question.email}">{{question.email}}</a>
+            <p>About {{question.time}} hr</p>
+            <a (click)="onDeleteOneQustion(question.id)" style="cursor: pointer; color: red"><i class="fa fa-times delete" aria-hidden="true">*</i></a>
+            <a routerLink="/question/answerQuestion/" [queryParams]="{questionId: question.id , asker: question.email , question: question.question} " class="answer answer_btn">Answer <i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
+          </div>
+
+        </section>
+
+
+      </article>
+
+    </div>
+
+    <!--  frind stuff   -->
+      <div class="col-xl-3" style="margin-left:10%">
+        <app-friend-stuff></app-friend-stuff>
+      </div>
+
+
+  </div>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
+

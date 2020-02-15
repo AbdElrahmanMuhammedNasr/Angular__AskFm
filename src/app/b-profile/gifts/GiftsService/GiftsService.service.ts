@@ -1,0 +1,3 @@
+export class GiftsServiceService {
+    onGetGifts() {}
+}

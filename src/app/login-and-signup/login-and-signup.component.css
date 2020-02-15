@@ -1,0 +1,82 @@
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+  background-color: #2A3545
+}
+/* --------------------------------------Start Main Rulez--------------------------------------------*/
+.container{     margin: auto;}
+.clear{clear: both}
+
+.h3{font-size: 25px; font-weight: bold; display: inline-block; margin: 20px }
+/*----------------------------------------------End Main Rulez-----------------------------------------*/
+
+
+input.ng-touched.ng-invalid{
+  border-bottom: 2px solid red ;
+  background-color: #f79f8f;
+}
+
+
+form {
+  margin-top: 56px;
+}
+.color{
+  width: 900px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 10%;
+  left: 22%;
+  border-radius: 25px;
+
+}
+.container2{
+  padding-top: 40px;
+  padding-bottom:  40px;
+  margin: auto;
+  /*margin-top: 50px;*/
+  width: 500px;
+
+}
+
+select {
+  font-size: 16px;
+  background: #fff;
+  padding: 10px 5px;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+
+}
+.Gender{
+  width: 80%;
+  margin-bottom: 10px
+}
+.Language{
+  width: 80%;
+  margin-bottom: 10px
+}
+
+input[type="checkbox"]{
+  float: left; width: 5%;margin-top: 5px;
+}
+.container2 a {
+  color:#FF6648;
+  text-decoration: none;
+}
+.login a {
+  float: right;
+}
+.container2 .btn {
+  width: 100%;
+  background-color: #FF6648;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+  margin: 15px 0;
+  border-radius: 5px
+
+}

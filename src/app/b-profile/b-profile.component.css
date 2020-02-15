@@ -1,0 +1,88 @@
+/*---------------------------------------------Start Cover--------------------------------------------*/
+.cover{
+  padding: 0;
+  margin: 0;
+  height: 400px;
+  color: #FFF
+}
+.default_photo-cover{
+  height: 330px;
+  background:url(aBackgoung.svg) no-repeat center center ;
+  background-size: cover;
+}
+
+.Profilee{
+  text-align: center;
+  margin-top: 70px
+}
+
+.Profilee .profile{
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+.Profilee .online{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #66B34F;
+  border: 1px solid #FFF;
+  display: inline-block;
+  margin: 0 3px;
+}
+.Profilee .userName{
+  margin-top: -7px ;
+  margin-bottom: 22px
+}
+
+.followers span{
+  margin-top: 20px !important;
+  padding: 8px 25px;
+  border-radius: 15px;
+  background:rgba(74,74,74,0.8);
+}
+.message span{
+  font-size: 26px;
+  background: rgba(0,0,0,0.5);
+  padding: 5px 40px;
+  border-radius: 25px;
+  position: absolute;
+  top: 85px;
+  right: 95px;
+  color: #F16541;
+  cursor: pointer;
+}
+.message span:hover{
+  background: rgba(255,255,255,.9);
+  padding: 5px 40px;
+}
+
+.inFo{
+  background-color: white;
+  width: 300px;
+  height: 300px;
+}
+.inFo input{
+  margin-top: 10px;
+  background-color: white;
+}
+
+.likes{
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.likes a{
+  text-decoration: none;
+}
+.likes span{
+  color: #4a4a4a
+}
+.likes ul {list-style-type: none;}
+.likes ul li { float: left; width: 33.3333%;  padding-bottom: 10px; cursor: pointer;}
+.likes ul li strong { color: #F16541;font-size: 15px }
+.activee{
+  border-bottom: 3px solid #F16541;
+  color: #F16541 ;
+}
+
