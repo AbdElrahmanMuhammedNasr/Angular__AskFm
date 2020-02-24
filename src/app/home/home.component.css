@@ -16,12 +16,15 @@
 .post section {
   border-top: 15px solid #EDEEF2;
 }
-.post section:hover{
-  background-color: #DADADF;
-}
+/*.post section:hover{*/
+/*  background-color: #DADADF;*/
+/*}*/
 .post .question a {
   color: #4080D8;
   display: inline-block;
+}
+.text{
+  overflow: hidden;
 }
 .post .answer img {
   float: left;
@@ -35,6 +38,7 @@
   display: inline-block;
   margin: 0 35px;
   padding: 10px;
+  overflow: hidden;
 }
 
 .post footer{

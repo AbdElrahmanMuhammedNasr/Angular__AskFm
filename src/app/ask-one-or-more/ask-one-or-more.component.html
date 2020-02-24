@@ -5,7 +5,13 @@
   <form (ngSubmit)="onAskoneOrMore()" #askOneOrMoreForm="ngForm">
     <textarea placeholder="What, when, why… ask" ngModel name="QUESTION" required="" ></textarea>
     <input type="checkbox" ngModel name="ANON" [value]=false> Ask anonymously
-     <button type="submit" [disabled]="!askOneOrMoreForm.valid" class="btn btn-outline-danger">ASK</button>
+    <BR><BR>
+    <label>
+      <a href=""> <i class="fa fa-camera" style="font-size: 30px" aria-hidden="true"></i></a>
+      <input type="file" id="file1"  name="file1" style="display:none" />
+    </label>
+
+    <button type="submit" [disabled]="!askOneOrMoreForm.valid" class="btn btn-outline-danger">ASK</button>
     <div class="clear"></div>
     <div *ngIf="fragmentTestMore">
       <textarea style="max-height: 100px ;"disabled [value]="usersAsked">

@@ -17,8 +17,6 @@ export class AHeaderComponent implements OnInit {
     console.log('the user ' + this.THE_USER);
   }
 
-
-
   onLogin() {
     this.router.navigate(['/login']);
   }

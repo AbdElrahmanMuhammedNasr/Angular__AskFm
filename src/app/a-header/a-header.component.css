@@ -2,8 +2,12 @@
 .AskClass{
   letter-spacing: 2px;
 }
-span{
+.logo{
   color: red;
+}
+.fa{
+  font-size:20px;
+  margin-left: 20px;
 }
 .loginButton{
   margin-left: 20px;

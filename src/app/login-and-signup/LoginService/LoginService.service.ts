@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable()
 export class LoginServiceService {
@@ -24,7 +24,9 @@ export class LoginServiceService {
    return  this.http.get(`http:localhost:8080/checkUser/${userInput.EMAIL}/${userInput.PASSWORD}` );
 
   }
+  onSignUp(user: any) {
+    return  this.http.post('http:localhost:8080/addUser', user );
 
-  onSignUp() {}
+  }
 
 }

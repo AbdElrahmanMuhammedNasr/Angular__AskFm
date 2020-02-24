@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+
 import { AppComponent } from './app.component';
 import { AHeaderComponent } from './a-header/a-header.component';
 import { BProfileComponent } from './b-profile/b-profile.component';
@@ -65,6 +66,7 @@ import {AuthGuard} from './Authontication/Auth_guard.service';
     FormsModule,
     AppRouterService,
     HttpClientModule,
+
   ],
   providers: [
                FirendService, HomeServiceService, LoginServiceService, QuestionServiceService,

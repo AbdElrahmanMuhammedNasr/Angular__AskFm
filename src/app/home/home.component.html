@@ -11,26 +11,56 @@
 
           <section style="margin-top: 20px">
             <div class="question">
-              <h3 class="h3">{{post.question}}</h3>
-              <a routerLink="/profile" [queryParams]="{user:post.email}">{{post.email}}</a>
-            </div>
+              <div style="border: 2px solid red">
+                <div>
+                  <span class="text">{{post.question}}</span>
+                  <div>
+                    <img src="./other.svg" style="border: 2px solid red">
+                    <a routerLink="/profile" [queryParams]="{user:post.email}">{{post.email}}</a>
+                  </div>
+                </div>
+              </div>
+
+             </div>
+            <br>
+<!--            end question-->
 
             <div class="answer">
-              <p>{{post.answer}}</p> <br><BR><BR>
-              <span>{{post.date | date}}</span>
-              <div  style=" width: 50px ; height: 50px ;background: url('./other.svg')" >
-              </div>
+
+                <div>
+                  <img src="./other.svg" style="border: 3px solid red">
+                  <span>{{post.user.fullName}}</span> <br>
+                  <span>{{post.date | date}}</span>
+                </div>
+
+                <div>
+                  <p>{{post.answer}}</p> <br>
+                </div>
+
             </div>
+
+
           </section>
 
-          <span>{{post.user.fullName}}</span>
 
           <hr>
+          <div class="row " style="width: 90%;margin: auto">
+            <div class="col-xs-4">
+              <i class="fa fa-heart-o" aria-hidden="true" style="font-size: 25px"></i>
+            </div>
+            <div class="col-xs-4" style="margin-left: 40%">
+              <i class="fa fa-reply" aria-hidden="true" style="font-size: 25px; float: right" ></i>
+            </div>
+            <div class="col-xs-4" style="margin-left: 49%">
+              <i class="fa fa-ellipsis-h" aria-hidden="true" style="font-size: 25px; float: right"></i>
+            </div>
+
+          </div>
+
         </div>
       </div>
 
 <!-- -->
-
 
     </div>
 <!--   left side -->

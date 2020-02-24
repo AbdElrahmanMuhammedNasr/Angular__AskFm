@@ -5,33 +5,23 @@
   <div class="color">
     <div class="container2">
 
-<!--      <section>-->
-        <input class="form-control" type="Email" name="Email" placeholder="Email" #userNameCheck="ngModel" ngModel name="EMAIL" required email> <br>
-<!--        <span class="help-block" *ngIf="!userNameCheck.valid && userNameCheck.touched">Please Enter Valid Email</span>-->
-<!--      </section>-->
-
-<!--      <section>-->
-     <input class="form-control" type="text"  placeholder="username" ngModel name="USERNAME" required> <br>
-      <input class="form-control" type="password" placeholder="password" ngModel name="PASSWORD" required> <br>
-      <input class="form-control" type="text"  placeholder="full name" ngModel name="FULLNAME" required><br>
-<!--      </section>-->
+       <input class="form-control" type="file" name="Input"  ngModel name="IMAGE">  <br>
+       <input class="form-control" type="Email" name="Email" placeholder="Email" ngModel name="EMAIL" required email> <br>
+       <input class="form-control" type="text"  placeholder="username" ngModel name="USERNAME" required> <br>
+       <input class="form-control" type="password" placeholder="password" ngModel name="PASSWORD" required> <br>
+       <input class="form-control" type="text"  placeholder="full name" ngModel name="FULLNAME" required><br>
       <h4>Birthdate</h4>
-      <input class="form-control" type="date" >
-
-
+      <input class="form-control" type="date"  ngModel name="DATE">
       <h4>Gender</h4>
       <select class="Gender" ngModel name="GENDER"  [ngModel]="'Male'">
         <option>Male</option>
         <option>Female</option>
       </select>
-
       <h4>Language</h4>
       <select class="Language" ngModel name="LANGUAGE"  [ngModel]="'en'">
         <option value="en">English</option>
         <option value="ar">Arabic</option>
       </select>
-
-
       <p>By signing up you agree to our <span> <a>Terms</a></span>  and <SPAN> <a href=""> Privacy policy</a></SPAN></p>
 
       <button type="submit" class="btn" [disabled]="!signUpFormData.valid">Sign Up</button>
