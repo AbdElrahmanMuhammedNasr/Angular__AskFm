@@ -14,9 +14,9 @@ export class SettingServiceService {
     return this.http.get<SettingInterface>(`http://localhost:8080/getUserSetting/${email}`);
   }
 
-  onUpdateSetting(newSetting: SettingInterface ) {
-    console.log(newSetting);
-    return this.http.post('http://localhost:8080/updateSetting', newSetting );
+  onUpdateSetting(newSetting: any ) {
+    console.log('i am in setting service');
+    return this.http.put('http://localhost:8080/updateSetting', newSetting );
   }
 
 }

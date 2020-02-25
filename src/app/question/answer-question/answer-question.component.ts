@@ -37,6 +37,7 @@ export class AnswerQuestionComponent implements OnInit {
   }
   // end function
 
+  //  this is the object that send to API
    answer: { answer: any; question: string; email: string };
   onAnswerQuestion() {
     this.answer = {

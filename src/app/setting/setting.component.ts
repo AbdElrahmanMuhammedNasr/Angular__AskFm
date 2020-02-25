@@ -47,7 +47,7 @@ export class SettingComponent implements OnInit {
 
 
   ngOnInit() {
-    this.onGetUserData(localStorage.getItem('THE_OWNER'));
+    this.onGetUserData('abdo@abdo.com');
    // this.onSetInitValue();
   }
 
@@ -62,35 +62,26 @@ export class SettingComponent implements OnInit {
    );
 
   }
-
-  // to upgrade Setting  data
-  // newSetting : {
-  //   idD: number,
-  //   location: string,
-  //   bio: string,
-  //   anotherWebSites: string [] ,
-  //   hashTags: string,
-  //   userName: string,
-  //   dateOfBirth: string,
-  //   gender: string,
-  //   privacyQuestion: boolean [],
-  // //
-  // }
+  // to pgrade the setting
+  newSetting: { hashTags: string; gender: string; anotherWebSites: string[]; bio: string; location: string; dateOfBirth: null; id: number; privacyQuestion: boolean[]; userName: string };
   onGetUpdateData() {
-    // console.log(this.updateData.value);
-    // this.newSetting.idD = 1
-    //  this.newSetting.location = this.updateData.value.LOCATION;
-    // this.newSetting.bio = this.updateData.value.BIO;
-    // this.newSetting.anotherWebSites = this.updateData.value.LOCATION;
-    // this.newSetting.hashTags = this.updateData.value.HASHTAG;
-    // this.newSetting.userName = this.userSetting.userName;
-    // this.newSetting.dateOfBirth = this.updateData.value.DATE;
-    // this.newSetting.gender = this.updateData.value.GENDER;
-    // this.newSetting.privacyQuestion = this.updateData.value.LOCATION;
-    //
-    //  console.log(this.newSetting);
-
-    this.settingServiceService.onUpdateSetting(this.updateData.value );
+  this.newSetting = {
+        id: this.userSetting.id,
+        location: this.updateData.value.LOCATION,
+        bio: this.updateData.value.BIO,
+        anotherWebSites: [...this.userSetting.anotherWebSites ],
+        hashTags: this.updateData.value.HASHTAG,
+        userName: this.userSetting.userName,
+        dateOfBirth: this.updateData.value.DATE,
+        gender: this.updateData.value.GENDER,
+        privacyQuestion: [this.updateData.value.CHECK1, this.updateData.value.CHECK2, this.updateData.value.CHECK3, this.updateData.value.CHECK4]
+    }
+     // console.log(this.newSetting);
+     this.settingServiceService.onUpdateSetting(this.newSetting ).subscribe(
+       data => {
+         console.log(data);
+       }
+     );
   }
   // end function
 }
