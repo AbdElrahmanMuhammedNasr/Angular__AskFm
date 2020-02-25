@@ -11,7 +11,6 @@ import {LoginServiceService} from './LoginService/LoginService.service';
 export class LoginAndSignupComponent implements OnInit {
   user: { userSetting: { hashTags: string; gender: any; anotherWebSites: null; bio: string; location: string; dateOfBirth: any; privacyQuestion: null; userName: any }; fullName: any; email: any };
 
-
     constructor(private router: Router, private loginServiceService: LoginServiceService) {}
 
   @ViewChild('signUpFormData', {static: false}) signupData: NgForm;
@@ -72,8 +71,12 @@ export class LoginAndSignupComponent implements OnInit {
     this.loginServiceService.onSignUp(this.user).subscribe(
       data => {
         console.log(data);
+      },
+      error => {
+        console.log(error );
+        console.log(error.url);
       }
-    );;
+    );
   }
 
 

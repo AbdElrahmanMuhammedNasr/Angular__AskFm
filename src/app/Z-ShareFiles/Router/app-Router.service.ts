@@ -22,13 +22,13 @@ const appRoutes: Routes = [
   {path : '' , redirectTo: '/home', pathMatch: 'full'},
   {path : 'home' , component: HomeComponent},
 
-  {path: 'profile', canActivateChild : [AuthGuard], component: BProfileComponent, children: [
+  // canActivateChild : [AuthGuard],
+  {path: 'profile',  component: BProfileComponent, children: [
       { path: 'answer', component: AnswerComponent},
       { path: 'gift', component: GiftsComponent},
       { path: 'likes', component: LikesComponent},
     ]},
-
-  {path: 'question', canActivateChild : [AuthGuard], component: QuestionComponent, children: [
+  {path: 'question', component: QuestionComponent, children: [
       {path: 'answerQuestion', component: AnswerQuestionComponent},
     ]},
 

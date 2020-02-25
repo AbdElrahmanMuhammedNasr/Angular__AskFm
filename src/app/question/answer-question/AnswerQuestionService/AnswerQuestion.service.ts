@@ -5,8 +5,8 @@ import {HttpClient} from '@angular/common/http';
 export class AnswerQuestionService {
   constructor(private http: HttpClient) {}
 
-  AnswerQuestion(question: string, askerName: string, theAnswer: string, questionId: number, ownerEmail: string) {
-      return this.http.get(`http://localhost:8080/answerQuestion/${question}/${askerName}/${questionId}/${ownerEmail}/${theAnswer}`);
+  AnswerQuestion(questionId: number, owner: string , answer: any) {
+     return this.http.post(`http://localhost:8080/answerQuestion/${questionId}/${owner}`, answer);
   }
 
 }

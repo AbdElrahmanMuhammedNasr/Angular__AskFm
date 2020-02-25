@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {AnswerQuestionService} from './AnswerQuestionService/AnswerQuestion.service';
+import {QuestionServiceService} from '../QuestionService/QuestionService.service';
 
 @Component({
   selector: 'app-answer-question',
@@ -11,7 +12,11 @@ import {AnswerQuestionService} from './AnswerQuestionService/AnswerQuestion.serv
 export class AnswerQuestionComponent implements OnInit {
   @ViewChild('answerQuestionForm', {static: false}) answerQuestionData: NgForm;
 
-  constructor(private route: ActivatedRoute, private router: Router, private  answerQuestionService: AnswerQuestionService) { }
+  constructor(private route: ActivatedRoute,
+              private router: Router,
+              private  answerQuestionService: AnswerQuestionService,
+              private questionServiceService: QuestionServiceService // to get all neew question
+  ) { }
   // this data about asker
   askerName: string;
   askerQuestion: string;
@@ -32,9 +37,19 @@ export class AnswerQuestionComponent implements OnInit {
   }
   // end function
 
+   answer: { answer: any; question: string; email: string };
   onAnswerQuestion() {
-    this.answerQuestionService.AnswerQuestion(this.askerQuestion, this.askerName, this.answerQuestionData.value.ANSWER_QUESTION, this.questionId, localStorage.getItem('THE_OWNER'));
-    this.answerQuestionData.reset();
+    this.answer = {
+      email: this.askerName,
+      answer: this.answerQuestionData.value.ANSWER_QUESTION,
+      question: this.askerQuestion,
+    };
+    this.answerQuestionService.AnswerQuestion(this.questionId , 'abdo@abdo.com' , this.answer).subscribe(
+      data => {
+        console.log(data);
+      }
+    );
+    // this.answerQuestionData.reset();
     this.onNotAnswer();
     // console.log(this.answerQuestionData.value);
   }
