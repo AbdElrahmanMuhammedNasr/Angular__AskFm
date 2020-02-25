@@ -41,7 +41,7 @@ export class AnswerQuestionComponent implements OnInit {
    answer: { answer: any; question: string; email: string };
   onAnswerQuestion() {
     this.answer = {
-      email: this.askerName,
+      email: this.askerName === 'NULL' ? '' : this.askerName,
       answer: this.answerQuestionData.value.ANSWER_QUESTION,
       question: this.askerQuestion,
     };

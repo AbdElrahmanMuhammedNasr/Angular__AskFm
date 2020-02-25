@@ -34,7 +34,7 @@ export class AskOneOrMoreComponent implements OnInit {
     this.onGetUserAccountFromLink();
   }
 
-  // function to get account user
+  // function to get account user ; the user you want to ask him
   onGetUserAccountFromLink() {
     this.userAccount = this.route.snapshot.queryParams.account;
   }
@@ -58,9 +58,14 @@ export class AskOneOrMoreComponent implements OnInit {
   // end fragment function
 
   // ask user or users
+  private question: { question: any; email: string };
   onAskoneOrMore() {
-      console.log(this.askOneOrMoreData.value);
-      this.askOneOrMoreData.reset();
+    this.question = {
+      question: this.askOneOrMoreData.value.QUESTION,
+      email: this.askOneOrMoreData.value.ANON.length < 1 || this.askOneOrMoreData.value.ANON === false   ? 'Hassan@Hassan.com' :  null,
+    };
+    this.askService.askFriends(this.userAccount, this.question).subscribe();
+    // this.askOneOrMoreData.reset();
   }
   // end ask user
 

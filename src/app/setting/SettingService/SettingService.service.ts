@@ -15,7 +15,6 @@ export class SettingServiceService {
   }
 
   onUpdateSetting(newSetting: any ) {
-    console.log('i am in setting service');
     return this.http.put('http://localhost:8080/updateSetting', newSetting );
   }
 

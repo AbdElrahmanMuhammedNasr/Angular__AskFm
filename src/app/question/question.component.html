@@ -29,7 +29,7 @@
 
           <div class="question_answer">
             <h3 class="h3">{{ question.question }}</h3>
-            <a routerLink="/profile" [queryParams]="{user: question.email}">{{question.email}}</a>
+            <a *ngIf="question.email != 'NULL' " routerLink="/profile" [queryParams]="{user: question.email}">{{question.email}}</a>
             <p>About {{question.time}} hr</p>
             <a (click)="onDeleteOneQustion(question.id)" style="cursor: pointer; color: red"><i class="fa fa-times delete" aria-hidden="true"></i></a>
             <a routerLink="/question/answerQuestion/" [queryParams]="{questionId: question.id , asker: question.email , question: question.question} " class="answer answer_btn">Answer <i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>

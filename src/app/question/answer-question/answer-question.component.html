@@ -2,7 +2,7 @@
 <section class="ask_people">
   <form (ngSubmit)="onAnswerQuestion()" #answerQuestionForm="ngForm">
     <p>{{askerQuestion}} </p>
-    <a class="nav-link" routerLink="/profile" [queryParams]="{user: askerName}">{{askerName}}</a>
+    <a *ngIf="askerName != 'NULL' " class="nav-link" routerLink="/profile" [queryParams]="{user: askerName}">{{askerName}}</a>
     <textarea placeholder="What, when, why… ask" ngModel name="ANSWER_QUESTION"  required>
 
     </textarea>

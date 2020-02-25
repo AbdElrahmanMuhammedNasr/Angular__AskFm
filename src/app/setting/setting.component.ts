@@ -42,13 +42,15 @@ export class SettingComponent implements OnInit {
       name: 'CHECK4'
     },
   ];
+
+  // tihs is object that will send to API
+ newSetting: { hashTags: string; gender: string; anotherWebSites: string[]; bio: string; location: string; dateOfBirth: null; id: number; privacyQuestion: boolean[]; userName: string };
   // end function
 
 
 
   ngOnInit() {
     this.onGetUserData('abdo@abdo.com');
-   // this.onSetInitValue();
   }
 
 
@@ -62,22 +64,22 @@ export class SettingComponent implements OnInit {
    );
 
   }
-  // to pgrade the setting
-  newSetting: { hashTags: string; gender: string; anotherWebSites: string[]; bio: string; location: string; dateOfBirth: null; id: number; privacyQuestion: boolean[]; userName: string };
+
+  // to upgrade the setting
   onGetUpdateData() {
   this.newSetting = {
         id: this.userSetting.id,
         location: this.updateData.value.LOCATION,
         bio: this.updateData.value.BIO,
-        anotherWebSites: [...this.userSetting.anotherWebSites ],
+        anotherWebSites: [...this.userSetting.anotherWebSites ], // i do not know how get from html
         hashTags: this.updateData.value.HASHTAG,
         userName: this.userSetting.userName,
         dateOfBirth: this.updateData.value.DATE,
         gender: this.updateData.value.GENDER,
         privacyQuestion: [this.updateData.value.CHECK1, this.updateData.value.CHECK2, this.updateData.value.CHECK3, this.updateData.value.CHECK4]
-    }
+    };
      // console.log(this.newSetting);
-     this.settingServiceService.onUpdateSetting(this.newSetting ).subscribe(
+  this.settingServiceService.onUpdateSetting(this.newSetting ).subscribe(
        data => {
          console.log(data);
        }
