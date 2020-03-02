@@ -46,7 +46,7 @@
       <span class="help-block" *ngIf="!userValid">Username or Password is not correct</span>
       <input class="form-control" type="text" placeholder="email" ngModel name="EMAIL" required email> <br>
       <input class="form-control" type="password"  placeholder="password" ngModel name="PASSWORD" required> <br>
-      <input  type="checkbox" name="check" ngModel > Remmber Password
+      <input  type="checkbox" name="check" [ngModel]=false > Remmber Me
       <a href="#">Forget Password ?</a>
       <button type="submit" class="btn">Login</button>
       <div class="clear"></div>

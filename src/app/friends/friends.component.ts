@@ -18,7 +18,7 @@ export class FriendsComponent implements OnInit {
   constructor(private router: Router, private friendService: FirendService) { }
 
   ngOnInit() {
-    this.onGetAllFriends(localStorage.getItem('THE_OWNER'));
+    this.onGetAllFriends('abdo@abdo.com');
   }
   // to ask on friend
   onAskOneFriend(friendAccount: string) {

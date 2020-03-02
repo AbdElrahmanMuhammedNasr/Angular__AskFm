@@ -11,12 +11,12 @@
 
           <section style="margin-top: 20px">
             <div class="question">
-              <div style="border: 2px solid red">
+              <div>
                 <div>
-                  <span class="text">{{post.question}}</span>
-                  <div>
-                    <img src="./other.svg" style="border: 2px solid red">
-                    <a routerLink="/profile" [queryParams]="{user:post.email}">{{post.email}}</a>
+                  <span class="text mb-2">{{post.question}}</span>
+                  <div class="form-row">
+                    <img class="col-md-1"  src="https://image.winudf.com/v2/image1/Y29tLmJ1bnR5YXBweC5hdnRhcm1ha2VyX3NjcmVlbl8wXzE1NjM0OTUwODFfMDg3/screen-0.jpg?fakeurl=1&type=.jpg" style="border-radius:50% ;width: 50px;height: 50px" >
+                    <a class="col-md-4 " routerLink="/profile" [queryParams]="{user:post.email}">{{post.email}}</a>
                   </div>
                 </div>
               </div>
@@ -27,10 +27,12 @@
 
             <div class="answer">
 
-                <div>
-                  <img src="./other.svg" style="border: 3px solid red">
-                  <span>{{post.user.fullName}}</span> <br>
-                  <span>{{post.date | date}}</span>
+                <div class="form-row">
+                  <img class="col-md-1" src="https://lh3.googleusercontent.com/proxy/9f6gqRwin-q9TFnDKWR70Ta1EBhEDUQoVtCxQ2e_j_5HkudfKdMpklz3_zG866r7DCtxVj2sIx_jDJNlRVZcvo92TzRSWcKBxcKyuEvHr5dU72-ujnYZnA" style="border-radius:50% ;width: 50px;height: 50px">
+                  <div class="col-md-4 ">
+                    <span>{{post.user.fullName}}</span> <br>
+                    <span>{{post.date | date}}</span>
+                  </div>
                 </div>
 
                 <div>

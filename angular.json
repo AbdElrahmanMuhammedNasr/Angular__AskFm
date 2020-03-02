@@ -121,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angularAskFm"
+    }
+  },
+  "defaultProject": "angularAskFm",
+  "cli": {
+    "analytics": "eb819461-f617-4f69-b42f-e65300320414"
+  }
 }

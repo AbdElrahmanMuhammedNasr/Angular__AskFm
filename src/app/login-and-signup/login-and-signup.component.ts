@@ -31,16 +31,16 @@ export class LoginAndSignupComponent implements OnInit {
 
     //  login function
   onLoginForm() {
-    localStorage.setItem('THE_OWNER', 'abdo@abdo.com');
+    // localStorage.setItem('THE_OWNER', 'abdo@abdo.com');
 
     // if the email and password is correct redirect to home if not redirect to login again
-    // this.loginServiceService.Login(this.loginData.value).subscribe(
-    //   data => {
-    //     console.log(data);
-    //   }
-    // );
+    this.loginServiceService.Login(this.loginData.value).subscribe(
+      data => {
+        console.log(data);
+      }
+    );
       // if (this.loginServiceService.Login(this.loginData.value)) {
-    this.router.navigate(['/home']);
+    // this.router.navigate(['/home']);
       // } else {
       //   this.router.navigate(['/login']);
       //   this.userValid = false;
@@ -67,7 +67,7 @@ export class LoginAndSignupComponent implements OnInit {
         privacyQuestion: null
       },
     };
-    console.log(this.user);
+    // console.log(this.user);
     this.loginServiceService.onSignUp(this.user).subscribe(
       data => {
         console.log(data);

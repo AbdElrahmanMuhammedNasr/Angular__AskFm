@@ -18,7 +18,7 @@ export class QuestionComponent implements OnInit {
   numberOfQuestions;
 
   // assume email
-  email = localStorage.getItem('THE_OWNER');
+  // email = localStorage.getItem('THE_OWNER');
 
 
   ngOnInit() {
@@ -27,7 +27,7 @@ export class QuestionComponent implements OnInit {
 
   // get all  user questions
   onGetAllQuestion() {
-    this.questionService.GetAllQuestions(this.email).subscribe(
+    this.questionService.GetAllQuestions('abdo@abdo.com').subscribe(
       data => {
         this.UserQuestions = data;
         // console.log(this.UserQuestions[0]);
@@ -35,7 +35,7 @@ export class QuestionComponent implements OnInit {
     );
 
     // to get the number of questions
-    this.questionService.GetNumberOfQuestionsPerUser(this.email).subscribe(
+    this.questionService.GetNumberOfQuestionsPerUser('abdo@abdo.com').subscribe(
       num => {
         this.numberOfQuestions = num;
         // console.log(typeof  this.numberOfQuestions);
@@ -61,9 +61,13 @@ export class QuestionComponent implements OnInit {
 
   onDeleteOneQustion(indexQuestion: number) {
     // console.log( indexQuestion);
-     this.questionService.DeleteOneQustion(indexQuestion);
-     this.onGetAllQuestion();
-    // console.log('delete one ' + indexQuestion);
+     this.questionService.DeleteOneQustion(indexQuestion).subscribe(
+       result => {
+         this.onGetAllQuestion();
+       } , error => {
+         console.log(error.error.error);
+       }
+     );
   }
 
 

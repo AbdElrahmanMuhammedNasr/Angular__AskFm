@@ -5,27 +5,23 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 export class LoginServiceService {
 
   constructor(private http: HttpClient) {  }
-  //
-  // user = {
-  //   email: 'abdo@abdo.com',
-  //   password: '123A',
-  // }
-  //
-  // onLogin(userInput: {EMAIL: undefined, PASSWORD: undefined}) {
-  //     if (this.user.email === userInput.EMAIL && this.user.password === userInput.PASSWORD ) {
-  //       return true;
-  //       localStorage.setItem('THE-USER-EMAIL', this.user.email);
-  //     } else {
-  //       return false;
-  //     }
-  // }
+
+
+  basicAuth() {
+    const hearderAut = 'Basic ' + window.btoa('abdo@abdo.com' + ':' + '123A');
+    return hearderAut;
+  }
 
   Login(userInput: {EMAIL: undefined, PASSWORD: undefined}) {
+   console.log(userInput);
    return  this.http.get(`http:localhost:8080/checkUser/${userInput.EMAIL}/${userInput.PASSWORD}` );
-
   }
+
   onSignUp(user: any) {
-    return  this.http.post('http:localhost:8080/addUser', user );
+    const header = new HttpHeaders({
+      Authorization: this.basicAuth()
+    });
+    return  this.http.post('http:localhost:8080/addUser', user , {headers: header} );
 
   }
 

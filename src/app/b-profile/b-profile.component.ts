@@ -22,7 +22,7 @@ export class BProfileComponent implements OnInit {
   ngOnInit() {
     // console.log('the user is '+this.user);
     if (this.user === null || this.user === undefined) {
-      this.onGetUserProfile(localStorage.getItem('THE_OWNER'));
+      this.onGetUserProfile('abdo@abdo.com');
     }
     this.onGetUserProfile(this.user);
   }

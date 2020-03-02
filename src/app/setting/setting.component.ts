@@ -81,7 +81,7 @@ export class SettingComponent implements OnInit {
      // console.log(this.newSetting);
   this.settingServiceService.onUpdateSetting(this.newSetting ).subscribe(
        data => {
-         console.log(data);
+         // console.log(data);
        }
      );
   }

@@ -16,8 +16,8 @@
   <div class="ask  friends">
     <h3 class="h3">Your Best friends</h3>
     <div class="scrollbar" id="style-13">
-      <div class="force-overflow" *ngFor="let best of bestFriend">
-          <img src="./other.svg"  style="margin-left: 30px">
+      <div class="force-overflow" style="margin: 5px" *ngFor="let best of bestFriend">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT7tvd4i1iMGuhjQ8zyxtaOEr5J3o3RU-VLOErATCofohrPnMj0"  style="border-radius:50% ;width: 50px;height: 50px" >
           <a routerLink="/profile" [queryParams]="{user:best.account}"> <span>{{best.account}}</span> </a>
           <button (click)="onAskOne(best.account)" class="btn"> ask</button>
       </div>
